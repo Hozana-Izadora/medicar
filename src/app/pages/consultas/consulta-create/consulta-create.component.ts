@@ -15,5 +15,6 @@ export class ConsultaCreateComponent implements OnInit {
       console.log(result)
     })
   }
+  
 
 }

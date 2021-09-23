@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClient,HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,7 +11,7 @@ import { ConsultasComponent } from './pages/consultas/consultas.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ConsultaCreateComponent } from './pages/consultas/consulta-create/consulta-create.component';
 
-import { HttpClient,HttpClientModule } from '@angular/common/http';
+import { InterceptorModule } from './interceptor.module';
 
 
 @NgModule({
@@ -30,7 +31,9 @@ import { HttpClient,HttpClientModule } from '@angular/common/http';
     NbCardModule,
     NbButtonModule,
     NbIconModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserModule,
+    InterceptorModule
     
   ],
   providers: [],

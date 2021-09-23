@@ -10,13 +10,16 @@ export class EspecialidadesService {
 
   constructor(private http: HttpClient) { }
 
+  // getStarWarsAPI() {  
+  //   return this.http.get('https://swapi.co/api/people/').subscribe(
+  //     data => {     console.log(data);  }); }
   list(){
-   let header = new HttpHeaders({ 
-     'Content-Type': 'application/json',
-     'Authorization': 'Token 5eb4fdc343dd922663945a0496dca7569b2514ab'
-    })
+  //  let header = new HttpHeaders({ 
+  //    'Content-Type': 'application/json',
+  //    'Authorization': 'Token 5eb4fdc343dd922663945a0496dca7569b2514ab'
+  //   })
 
    
-    return this.http.get<Especialidades>(this.urlBase, {headers: header})
+    return this.http.get(this.urlBase)
   }
 }
