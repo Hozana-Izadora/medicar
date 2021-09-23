@@ -4,15 +4,19 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NbThemeModule, NbLayoutModule, NbCardModule } from '@nebular/theme';
+import { NbThemeModule, NbLayoutModule, NbCardModule, NbButtonModule, NbIconModule } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { ConsultasComponent } from './pages/consultas/consultas.component';
+import { HeaderComponent } from './components/header/header.component';
+import { ConsultaCreateComponent } from './pages/consultas/consulta-create/consulta-create.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ConsultasComponent
+    ConsultasComponent,
+    HeaderComponent,
+    ConsultaCreateComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +25,9 @@ import { ConsultasComponent } from './pages/consultas/consultas.component';
     NbThemeModule.forRoot({ name: 'corporate' }),
     NbLayoutModule,
     NbEvaIconsModule,
-    NbCardModule
+    NbCardModule,
+    NbButtonModule,
+    NbIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

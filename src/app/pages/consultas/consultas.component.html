@@ -1,10 +1,40 @@
 <nb-layout>
-  <nb-layout-header fixed>Awesome Company</nb-layout-header>
+  <nb-layout-header fixed><app-header></app-header>  </nb-layout-header>
   <nb-layout-column class="colored-column-basic">
-    <nb-card>
-      <nb-card-header>Nebula</nb-card-header>
+    <nb-card> 
+      <!-- 5eb4fdc343dd922663945a0496dca7569b2514ab -->
+      <nb-card-header>
+
+      <div class="row">
+          <div class="col-md-10">
+              Consulta Clínica 
+          </div>
+        <div class="col-md-2">
+            <button (click)= "newConsulta()" nbButton  status ='success'><nb-icon icon="plus"></nb-icon> Nova Consulta</button>
+        </div>
+      </div> 
+      </nb-card-header>   
       <nb-card-body>
-          
+        <table class="table table-striped">
+          <thead>
+            <tr class="text-center">
+              <th>ESPECIALIDADE</th>
+              <th>PROFISSIONAL</th>
+              <th>DATA</th>
+              <th>HORA</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="text-center">
+              <td class="align-row">Cardiologista</td>
+              <td class="align-row">Dr.Caio Carlos Ferreira</td>
+              <td class="align-row">23/10/2021</td>
+              <td class="align-row">13:00</td>
+              <td><button nbButton ghost status ='success'><nb-icon icon="close-outline"></nb-icon> Desmarcar</button></td>
+            </tr>
+          </tbody>
+        </table>
       </nb-card-body>
     </nb-card>
   </nb-layout-column>
