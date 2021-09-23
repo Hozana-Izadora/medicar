@@ -6,7 +6,7 @@ import { Especialidades } from '../pages/consultas/consulta-create/consulta-crea
   providedIn: 'root'
 })
 export class EspecialidadesService {
-  urlBase = "https://intmed-api-medicar.herokuapp.com/especialidades"
+  urlBase = "https://intmed-api-medicar.herokuapp.com/especialidades/"
 
   constructor(private http: HttpClient) { }
 
