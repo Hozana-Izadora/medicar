@@ -11,8 +11,6 @@ export class EspecialidadesService {
   constructor(private http: HttpClient) { }
 
     list(){
-      return this.http.get(this.urlBase).subscribe(data => {     
-        console.log(data);  
-      }); 
+      return this.http.get(this.urlBase)
     }
 }
