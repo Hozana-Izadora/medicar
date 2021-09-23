@@ -1,3 +1,4 @@
+import { EspecialidadesService } from './../../../services/especialidades.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConsultaCreateComponent implements OnInit {
 
-  constructor() { }
+  constructor(private EspecialidadesService: EspecialidadesService) { }
 
   ngOnInit(): void {
+    this.EspecialidadesService.list().subscribe((result: any) => {
+      console.log(result)
+    })
   }
 
 }

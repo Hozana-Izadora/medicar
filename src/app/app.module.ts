@@ -10,6 +10,8 @@ import { ConsultasComponent } from './pages/consultas/consultas.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ConsultaCreateComponent } from './pages/consultas/consulta-create/consulta-create.component';
 
+import { HttpClient,HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { ConsultaCreateComponent } from './pages/consultas/consulta-create/consu
     NbEvaIconsModule,
     NbCardModule,
     NbButtonModule,
-    NbIconModule
+    NbIconModule,
+    HttpClientModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
