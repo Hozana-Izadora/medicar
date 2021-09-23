@@ -11,9 +11,7 @@ export class ConsultaCreateComponent implements OnInit {
   constructor(private EspecialidadesService: EspecialidadesService) { }
 
   ngOnInit(): void {
-    this.EspecialidadesService.list().subscribe((result: any) => {
-      console.log(result)
-    })
+    this.EspecialidadesService.list()
   }
   
 
