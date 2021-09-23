@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Especialidades } from '../pages/consultas/consulta-create/consulta-create.module';
 
 @Injectable({
   providedIn: 'root'
@@ -10,12 +11,12 @@ export class EspecialidadesService {
   constructor(private http: HttpClient) { }
 
   list(){
+   let header = new HttpHeaders({ 
+     'Content-Type': 'application/json',
+     'Authorization': 'Token 5eb4fdc343dd922663945a0496dca7569b2514ab'
+    })
 
-    let header = new HttpHeaders().set(
-      "Authorization",
-      "Token 5eb4fdc343dd922663945a0496dca7569b2514ab"
-    );
-
-    return this.http.get<JSON>(this.urlBase, {headers: header})
+   
+    return this.http.get<Especialidades>(this.urlBase, {headers: header})
   }
 }
