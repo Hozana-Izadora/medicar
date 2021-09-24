@@ -4,12 +4,12 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class EspecialidadesService {
-  urlBase = "https://intmed-api-medicar.herokuapp.com/especialidades/"
+export class MedicosService {
+  urlBase = "https://intmed-api-medicar.herokuapp.com/medicos/"
 
   constructor(private http: HttpClient) { }
 
-    listEspecialidades(){
+    listMedicos(){
       return this.http.get(this.urlBase)
     }
 }

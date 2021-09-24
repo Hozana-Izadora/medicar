@@ -5,7 +5,7 @@ import { HttpClient,HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NbThemeModule, NbLayoutModule, NbCardModule, NbButtonModule, NbIconModule } from '@nebular/theme';
+import { NbThemeModule, NbLayoutModule, NbCardModule, NbButtonModule, NbIconModule, NbSelectModule } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { ConsultasComponent } from './pages/consultas/consultas.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -33,7 +33,8 @@ import { InterceptorModule } from './interceptor.module';
     NbIconModule,
     HttpClientModule,
     BrowserModule,
-    InterceptorModule
+    InterceptorModule,
+    NbSelectModule
     
   ],
   providers: [],

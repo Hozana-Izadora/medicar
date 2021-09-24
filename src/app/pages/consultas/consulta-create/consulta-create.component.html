@@ -1,10 +1,17 @@
 <nb-layout>
-    <nb-layout-header fixed><app-header></app-header>  </nb-layout-header>
-    <nb-layout-column class="colored-column-basic">
-      <nb-card> 
-         
-        <nb-card-header>
-        </nb-card-header>
-      </nb-card>
-      </nb-layout-column>
+  <nb-layout-header fixed><app-header></app-header> </nb-layout-header>
+  <nb-layout-column class="colored-column-basic">
+    <nb-card>
+      <nb-card-header>Nova Consulta</nb-card-header>
+      <nb-card-body>
+        <div class="row col-md-12">
+          <nb-select placeholder="Especialidades" fullWidth formControlName = "especialidades" shape="semi-round" ng-change="getIdMedico()"  >            
+            <nb-option *ngFor="let especialidade of especialidades" [value]="especialidade.value" >
+              {{ especialidade.label }}
+            </nb-option>
+          </nb-select>
+        </div>
+      </nb-card-body>
+    </nb-card>
+  </nb-layout-column>
 </nb-layout>
