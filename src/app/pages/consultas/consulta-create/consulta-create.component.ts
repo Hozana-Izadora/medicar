@@ -26,20 +26,19 @@ export class ConsultaCreateComponent implements OnInit {
         this.especialidades.push({value: element.id, label: element.nome})
       });
       console.log(this.especialidades)
-
       
     });
-    // this.MedicosService.listMedicos().subscribe((dataMedicos: any )=> {
-    //   dataMedicos.results.forEach((element:any )=> {
-    //     this.medicos.push([element.id,element.crm,element.nome])
-    //   });
-    // });
+   
 
   }
-  
-  
-  getIdMedico(id:any) {
-    alert('hello')
+  getMedicobyEspecialidade(id:any) {
+    this.medicos = []
+     this.MedicosService.listMedicosbyEspecialidade(id).subscribe((dataMedicos: any )=> {
+      dataMedicos.results.forEach((element:any )=> {
+        this.medicos.push({value: element.id, crm:element.crm, label: element.nome})
+      });
+      console.log(this.medicos)
+    });
   } 
 
 }

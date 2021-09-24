@@ -5,9 +5,16 @@
       <nb-card-header>Nova Consulta</nb-card-header>
       <nb-card-body>
         <div class="row col-md-12">
-          <nb-select placeholder="Especialidades" fullWidth shape="semi-round" (change)="getIdMedico($event)"  >            
+          <nb-select placeholder="Especialidades" fullWidth shape="semi-round" (selectedChange)="getMedicobyEspecialidade($event)"  >            
             <nb-option *ngFor="let especialidade of especialidades" [value]="especialidade.value" >
               {{ especialidade.label }}
+            </nb-option>
+          </nb-select>
+        </div>
+        <div class="row col-md-12">
+          <nb-select placeholder="Medicos" fullWidth shape="semi-round" >            
+            <nb-option *ngFor="let medico of medicos" [value]="medico.value" >
+              {{ medico.label}}
             </nb-option>
           </nb-select>
         </div>

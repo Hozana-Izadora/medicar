@@ -12,4 +12,8 @@ export class MedicosService {
     listMedicos(){
       return this.http.get(this.urlBase)
     }
+    listMedicosbyEspecialidade(id:number){
+      const  parameter = `${this.urlBase}?especialidade=${id}`
+      return this.http.get(parameter)
+    }
 }
