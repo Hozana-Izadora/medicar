@@ -29,15 +29,17 @@ export class ConsultaCreateComponent implements OnInit {
 
       
     });
-    this.MedicosService.listMedicos().subscribe((dataMedicos: any )=> {
-      dataMedicos.results.forEach((element:any )=> {
-        this.medicos.push([element.id,element.crm,element.nome])
-      });
-    });
+    // this.MedicosService.listMedicos().subscribe((dataMedicos: any )=> {
+    //   dataMedicos.results.forEach((element:any )=> {
+    //     this.medicos.push([element.id,element.crm,element.nome])
+    //   });
+    // });
 
-    function getIdMedico() {
-      console.log('hello')
-    } 
   }
+  
+  
+  getIdMedico(id:any) {
+    alert('hello')
+  } 
 
 }

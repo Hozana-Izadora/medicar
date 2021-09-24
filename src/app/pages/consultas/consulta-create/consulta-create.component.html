@@ -5,7 +5,7 @@
       <nb-card-header>Nova Consulta</nb-card-header>
       <nb-card-body>
         <div class="row col-md-12">
-          <nb-select placeholder="Especialidades" fullWidth formControlName = "especialidades" shape="semi-round" ng-change="getIdMedico()"  >            
+          <nb-select placeholder="Especialidades" fullWidth shape="semi-round" (change)="getIdMedico($event)"  >            
             <nb-option *ngFor="let especialidade of especialidades" [value]="especialidade.value" >
               {{ especialidade.label }}
             </nb-option>
