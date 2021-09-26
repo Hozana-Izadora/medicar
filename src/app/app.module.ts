@@ -12,6 +12,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { ConsultaCreateComponent } from './pages/consultas/consulta-create/consulta-create.component';
 
 import { InterceptorModule } from './interceptor.module';
+import { LoginComponent } from './pages/login/login.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { InterceptorModule } from './interceptor.module';
     AppComponent,
     ConsultasComponent,
     HeaderComponent,
-    ConsultaCreateComponent
+    ConsultaCreateComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
