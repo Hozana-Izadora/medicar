@@ -1,24 +1,51 @@
 <nb-layout>
-  <nb-layout-header fixed><app-header></app-header> </nb-layout-header>
+  <nb-layout-header fixed>
+    <app-header></app-header>
+  </nb-layout-header>
   <nb-layout-column class="colored-column-basic">
     <nb-card>
-      <nb-card-header>Nova Consulta</nb-card-header>
+      <nb-card-header> <h4>
+        Nova Consulta
+      </h4>
+    </nb-card-header>
       <nb-card-body>
-        <div class="row col-md-12">
-          <nb-select placeholder="Especialidades" fullWidth shape="semi-round" (selectedChange)="getMedicobyEspecialidade($event)"  >            
-            <nb-option *ngFor="let especialidade of especialidades" [value]="especialidade.value" >
-              {{ especialidade.label }}
-            </nb-option>
-          </nb-select>
-        </div>
-        <div class="row col-md-12">
-          <nb-select placeholder="Medicos" fullWidth shape="semi-round" >            
-            <nb-option *ngFor="let medico of medicos" [value]="medico.value" >
-              {{ medico.label}}
-            </nb-option>
-          </nb-select>
-        </div>
+        <nb-select placeholder="Especialidades" fullWidth (selectedChange)="getMedicobyEspecialidade($event)">
+          <nb-option *ngFor="let especialidade of especialidades" [value]="especialidade.value">
+            {{ especialidade.label }}
+          </nb-option>
+        </nb-select>
+        <hr>
+        <nb-select placeholder="Medicos" fullWidth (selectedChange)="getDatasbyMedicos($event)">
+          <nb-option *ngFor="let medico of medicos" [value]="medico.value">
+            {{ medico.label }}
+          </nb-option>
+        </nb-select>
+        <hr>
+        <nb-select placeholder="Datas" fullWidth (selectedChange)="getHorarioByDatas(idMedico,$event)">
+
+          <nb-option *ngFor="let day of datas" [value]="day.value">
+            {{ day.value | date: 'dd/MM/Y'}}
+          </nb-option>
+        </nb-select>
+        <hr>
+        <nb-select placeholder="Horário" fullWidth>
+          <nb-option *ngFor="let hora of horario">
+            {{ hora.value }}
+          </nb-option>
+        </nb-select>
       </nb-card-body>
+      <nb-card-footer>
+        <div class="row">
+
+          <div class="col-md-10">
+            <button nbButton ghost status='success' (click)= "cancelConsulta()">Cancelar</button>
+          </div>
+          <div class="col-md-2" >
+            <button nbButton shape="rectangle" status="success">Confirmar</button>
+          </div>
+
+        </div>
+      </nb-card-footer>
     </nb-card>
   </nb-layout-column>
 </nb-layout>

@@ -12,6 +12,10 @@ const routes: Routes = [
     path: 'consulta/add',
     component: ConsultaCreateComponent
   },
+  {
+    path: 'consultas',
+    component: ConsultaCreateComponent
+  },
 ];
 
 @NgModule({
