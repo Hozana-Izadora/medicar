@@ -8,12 +8,12 @@
                     <div class="center-input">
 
                         <div class="form-floating mb-3">
-                            <input [(ngModel)] = "Usuario.usuario" type="email" class="form-control input-size" id="usuario" name="usuario"
+                            <input type="email" class="form-control input-size" id="usuario" name="usuario"
                                 placeholder="name@example.com">
                             <label for="floatingInput">Email ou Login</label>
                         </div>
                         <div class="form-floating">
-                            <input  [(ngModel)] = "Usuario.senha" type="password" class="form-control" id="senha" name="senha" placeholder="Password">
+                            <input type="password" class="form-control" id="senha" name="senha" placeholder="Password">
                             <label for="floatingPassword">Password</label>
                         </div>
                     </div>
@@ -28,10 +28,10 @@
 
             <div class="row text-center button-margin">
                 <div class="col-md-6">
-                    <button class="btn btn-cancel">Criar Conta</button>
+                    <button class="btn btn-cancel" (click)="novaConta()">Criar Conta</button>
                 </div>
                 <div class="col-md-6">
-                    <button class="btn btn-confirm" (click)= "login()">Confirmar</button>
+                    <button class="btn btn-confirm">Confirmar</button>
                 </div>
             </div>
         </nb-card-body>

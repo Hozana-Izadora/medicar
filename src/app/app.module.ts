@@ -13,6 +13,8 @@ import { ConsultaCreateComponent } from './pages/consultas/consulta-create/consu
 
 import { InterceptorModule } from './interceptor.module';
 import { LoginComponent } from './pages/login/login.component';
+import { FormsModule } from '@angular/forms';
+import { NovaContaComponent } from './pages/contas/nova-conta/nova-conta.component';
 
 
 @NgModule({
@@ -21,7 +23,8 @@ import { LoginComponent } from './pages/login/login.component';
     ConsultasComponent,
     HeaderComponent,
     ConsultaCreateComponent,
-    LoginComponent
+    LoginComponent,
+    NovaContaComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +39,8 @@ import { LoginComponent } from './pages/login/login.component';
     HttpClientModule,
     BrowserModule,
     InterceptorModule,
-    NbSelectModule
+    NbSelectModule,
+    FormsModule
     
   ],
   providers: [],

@@ -12,15 +12,16 @@ import { Usuario } from './usuario';
 export class LoginComponent implements OnInit {
 
   private Usuario: Usuario = new Usuario();
-  constructor(private Login: LoginService) {}
+  constructor(
+    private Login: LoginService
+  ) { }
 
-  ngOnInit(): void {}
-
-  login(){
-    console.log(this.Usuario)
-    // this.Login.getUser().subscribe((element: any) => {
-    //   console.log(element)
-    // })
-  }
  
+
+  ngOnInit(): void { }
+
+  novaConta(){
+    
+  }
+
 }

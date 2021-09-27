@@ -4,9 +4,13 @@
 img {
   margin: 80px;
 }
+.card-content{
+  width: 60% !important;
+  display: flex;
+}
 
 .logo {
-  width: 40%;
+  width: 420px;
 }
 #remember {
   margin-top: 30px;
