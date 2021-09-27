@@ -12,11 +12,8 @@ export class Interceptor implements HttpInterceptor {
     request: HttpRequest<any>,
     next: HttpHandler
   ): Observable<HttpEvent<any>> {
+  
     request = request.clone({
-      // body:{...request.body,
-      //   'username':"hozana-izadora",
-      //   'password':"izadora2352"
-      // }
       setHeaders: {
         Authorization: 'Token 5eb4fdc343dd922663945a0496dca7569b2514ab',
       },

@@ -8,12 +8,12 @@
                     <div class="center-input">
 
                         <div class="form-floating mb-3">
-                            <input type="email" class="form-control input-size" id="user"
+                            <input [(ngModel)] = "Usuario.usuario" type="email" class="form-control input-size" id="usuario" name="usuario"
                                 placeholder="name@example.com">
                             <label for="floatingInput">Email ou Login</label>
                         </div>
                         <div class="form-floating">
-                            <input type="password" class="form-control" id="password" placeholder="Password">
+                            <input  [(ngModel)] = "Usuario.senha" type="password" class="form-control" id="senha" name="senha" placeholder="Password">
                             <label for="floatingPassword">Password</label>
                         </div>
                     </div>
