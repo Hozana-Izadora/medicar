@@ -6,3 +6,9 @@ thead tr{
 .align-row{
     padding: 18px;
 }
+button{
+
+    background-color: #49b4bb!important;
+
+    border-radius: 8px!important;
+}

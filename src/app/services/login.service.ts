@@ -11,5 +11,7 @@ export class LoginService {
   getUser(){
     const body = {username:"hozana-izadora",'password':"izadora2352"}
 
+    // window.localStorage.
+
     return this.http.post(this.urlBase,body)  }
 }

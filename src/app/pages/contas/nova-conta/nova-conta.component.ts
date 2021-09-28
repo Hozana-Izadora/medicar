@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router'
 
 @Component({
   selector: 'app-nova-conta',
@@ -14,12 +15,18 @@ export class NovaContaComponent implements OnInit {
     return 'password';
   }
 
+
+
   toggleShowPassword() {
     this.showPassword = !this.showPassword;
   }
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  cancel(){
+    this.router.navigate(["login"])
   }
 
 }
