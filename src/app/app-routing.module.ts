@@ -1,3 +1,4 @@
+import { NovaContaComponent } from './pages/contas/nova-conta/nova-conta.component';
 import { ConsultaCreateComponent } from './pages/consultas/consulta-create/consulta-create.component';
 import { ConsultasComponent } from './pages/consultas/consultas.component';
 import { NgModule } from '@angular/core';
@@ -20,6 +21,10 @@ const routes: Routes = [
   {
     path: 'consultas',
     component: ConsultaCreateComponent
+  },
+  {
+    path: 'conta/add',
+    component: NovaContaComponent
   },
 ];
 

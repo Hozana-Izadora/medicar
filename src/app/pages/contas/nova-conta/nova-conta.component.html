@@ -1,1 +1,49 @@
-<p>nova-conta works!</p>
+<nb-layout>
+  <nb-layout-column>
+    <div class="container">
+      <nb-card>
+        <nb-card-body>
+          <div class="text-center">
+            <img class="logo" src="assets/logo.png" alt="Logo" />
+
+            <form>
+              <div class="center-input">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control input-size" id="usuario" name="usuario"
+                            placeholder="Nome">
+                        <label for="floatingInput">Nome</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control input-size" id="usuario" name="usuario"
+                            placeholder="name@example.com">
+                        <label for="floatingInput">Email ou Login</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="password" class="form-control" id="senha" name="senha" placeholder="Senha">
+                        <label for="floatingPassword">Senha</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="password" class="form-control" id="senha" name="senha" placeholder="Confirmar Senha">
+                        <label for="floatingPassword">Confirmar Senha</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="row text-center button-margin">
+            <div class="col-md-6">
+              <button class="btn btn-cancel">Cancelar</button>
+            </div>
+            <div class="col-md-6">
+              <button class="btn btn-confirm">Confirmar</button>
+            </div>
+          </div>
+        </nb-card-body>
+      </nb-card>
+    </div>
+  </nb-layout-column>
+</nb-layout>

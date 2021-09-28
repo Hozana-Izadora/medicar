@@ -6,7 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nova-conta.component.css']
 })
 export class NovaContaComponent implements OnInit {
+  showPassword = true;
+  getInputType() {
+    if (this.showPassword) {
+      return 'text';
+    }
+    return 'password';
+  }
 
+  toggleShowPassword() {
+    this.showPassword = !this.showPassword;
+  }
   constructor() { }
 
   ngOnInit(): void {

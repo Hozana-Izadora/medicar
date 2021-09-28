@@ -1,0 +1,29 @@
+* {
+    color: #a8a8a8;
+  }
+  img {
+    margin: 80px;
+  }
+  .card-content{
+    width: 60% !important;
+    display: flex;
+  }
+  
+.logo {
+    width: 420px;
+}
+.button-margin{
+    margin: 50px;;
+}
+.btn-cancel {
+  color: #49b4bb;
+  border-radius: 8px;
+  border-color: #dfdada;
+  width: 200px;
+}
+.btn-confirm {
+    color: white;
+    background: #49b4bb;
+    border-radius: 8px;
+    width: 200px;
+  }
