@@ -12,10 +12,10 @@ export class Interceptor implements HttpInterceptor {
     request: HttpRequest<any>,
     next: HttpHandler
   ): Observable<HttpEvent<any>> {
-  
+    let tokenAuth = localStorage.getItem('token');
     request = request.clone({
       setHeaders: {
-        Authorization: 'Token 5eb4fdc343dd922663945a0496dca7569b2514ab',
+        Authorization: `${tokenAuth}`,
       },
     });
     return next.handle(request);
