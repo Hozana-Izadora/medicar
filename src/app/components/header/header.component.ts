@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { LocalStorageService } from 'src/app/services/local-storage.service';
 
 @Component({
   selector: 'app-header',
@@ -9,21 +8,19 @@ import { LocalStorageService } from 'src/app/services/local-storage.service';
 })
 export class HeaderComponent implements OnInit {
   constructor(
-    private router: Router,
-    private localStorage: LocalStorageService
+    private router: Router
   ) {}
   user: any = '';
 
   ngOnInit(): void {
-    this.user = localStorage.getItem('user');
+    this.user = window.localStorage.getItem('user');
   }
 
   desconectar() {
-    this.localStorage.remove('token');
-    this.localStorage.remove('user');
-    this.localStorage.clear();
+    window.localStorage.removeItem('token')
+    window.localStorage.removeItem('user')
+    window.localStorage.clear();
 
-
-    this.router.navigate(['login']);
+    this.router.navigate(['']);
   }
 }

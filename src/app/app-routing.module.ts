@@ -4,15 +4,17 @@ import { ConsultasComponent } from './pages/consultas/consultas.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './pages/login/login.component';
+import { AuthGuard } from './services/auth.guard';
 
 const routes: Routes = [
   {
-    path: 'login',
+    path: '',
     component: LoginComponent
   },
   {
     path: 'consultas',
-    component: ConsultasComponent
+    component: ConsultasComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'consulta/add',
