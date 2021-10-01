@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class LoginService {
-  urlBase = 'https://intmed-api-medicar.herokuapp.com/users/login';
+  urlBase = 'https://k6k3qur6vk.api.quickmocker.com/users/login';
   constructor(private http: HttpClient,
    ) { }
 

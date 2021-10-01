@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class HorariosService {
 
-  urlBase = "https://intmed-api-medicar.herokuapp.com/agendas/"
+  urlBase = "https://k6k3qur6vk.api.quickmocker.com/agendas/"
 
   constructor(private http: HttpClient) { }
 
