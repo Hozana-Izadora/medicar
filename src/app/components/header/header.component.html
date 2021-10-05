@@ -1,8 +1,13 @@
-<div class="row ">
-    <img src="assets/logo.png" alt="Logo">        
-        <div class="col-md-8 btn-user"> 
-            {{user}} 
-            <span class="link" (click)="desconectar()">Desconectar</span>
+<div class="header">
+
+    <div class="header-container">
+        <img src="assets/logo.png" alt="Logo" />
+        
+    </div>
+    <div class="header-container" id="header-label">
+        <div class="btn-user">
+            {{ user }}
         </div>
-      
+        <span class="link logoff-span" (click)="desconectar()">Desconectar</span>
+    </div>
 </div>

@@ -2,11 +2,26 @@ img{
   width: 200px;
   margin-top: 5px;
 }
+.header{
+  display: flex;
+  justify-content: space-between;
+  
+}
+.header-container{
+  width: 80%;
+  display: flex;
+}
+#header-label{
+  display: flex;
+  position: relative;
+  left: 65rem;
+  top: 17px;
+}
 
-/* .link:hover {
+.link:hover {
   cursor: pointer;
   color: #49b4bb;
 }
 .logoff-span{
-  padding-right: 40px;
-} */
+  padding-left: 60px;
+} 
