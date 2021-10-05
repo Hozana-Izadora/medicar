@@ -18,12 +18,13 @@ const routes: Routes = [
   },
   {
     path: 'consulta/add',
-    component: ConsultaCreateComponent
+    component: ConsultaCreateComponent,
+    canActivate: [AuthGuard]
   },
-  {
-    path: 'consultas',
-    component: ConsultaCreateComponent
-  },
+  // {
+  //   path: 'consultas',
+  //   component: ConsultaCreateComponent
+  // },
   {
     path: 'conta/add',
     component: NovaContaComponent

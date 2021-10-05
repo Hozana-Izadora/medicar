@@ -13,7 +13,7 @@ export class HeaderComponent implements OnInit {
   user: any = '';
 
   ngOnInit(): void {
-    this.user = window.localStorage.getItem('user');
+    this.user = window.localStorage.getItem('user')
   }
 
   desconectar() {

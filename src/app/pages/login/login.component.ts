@@ -8,10 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
-  constructor(
-    private router: Router, 
-    private LoginService: LoginService
-    ) {}
+  constructor(private router: Router, private LoginService: LoginService) {}
 
   email: string = '';
   senha: string = '';
@@ -22,15 +19,14 @@ export class LoginComponent implements OnInit {
     this.router.navigate(['conta/add']);
   }
 
-  enviar() {
+  login() {
     this.LoginService.getUser(this.email, this.senha).subscribe(
       (result: any) => {
-        // if(result){
-          //  window.localStorage.setItem('token',result.token)
-          //  window.localStorage.setItem('user' ,result.user)
-        //   this.router.navigate(["/consultas"]) 
-        // }
-        console.log(result);
+        if (result) {
+          window.localStorage.setItem('token', result.token);
+          window.localStorage.setItem('user', result.username);
+          this.router.navigate(['/consultas']);
+        }
       }
     );
   }

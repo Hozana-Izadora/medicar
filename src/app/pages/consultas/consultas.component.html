@@ -1,19 +1,21 @@
 <nb-layout>
-  <nb-layout-header fixed> <app-header></app-header>  </nb-layout-header>
+  <nb-layout-header fixed>
+        <app-header></app-header>      
+  </nb-layout-header>
   <nb-layout-column class="colored-column-basic">
-    <nb-card> 
-      <!-- 5eb4fdc343dd922663945a0496dca7569b2514ab -->
+    <nb-card>
       <nb-card-header>
-
-      <div class="row">
+        <div class="row">
           <div class="col-md-10">
-              Consulta Clínica 
+            <h4>Consulta Clínica</h4> 
           </div>
-        <div class="col-md-2">
-            <button (click)= "newConsulta()" nbButton  status ='success'><nb-icon icon="plus"></nb-icon> Nova Consulta</button>
+          <div class="col-md-2">
+            <button class="btn-nova-consulta" (click)="newConsulta()" nbButton status='success'>
+              <nb-icon icon="plus"></nb-icon> Nova Consulta
+            </button>
+          </div>
         </div>
-      </div> 
-      </nb-card-header>   
+      </nb-card-header>
       <nb-card-body>
         <table class="table table-striped">
           <thead>
@@ -25,13 +27,15 @@
               <th></th>
             </tr>
           </thead>
-          <tbody>
-            <tr class="text-center">
-              <td class="align-row">Cardiologista</td>
-              <td class="align-row">Dr.Caio Carlos Ferreira</td>
-              <td class="align-row">23/10/2021</td>
-              <td class="align-row">13:00</td>
-              <td><button nbButton ghost status ='success'><nb-icon icon="close-outline"></nb-icon> Desmarcar</button></td>
+          <tbody> 
+            <tr class="text-center" *ngFor="let consulta of consultas" >
+              <td class="align-row">{{consulta.medico.especialidade.nome}}</td>
+              <td class="align-row">{{consulta.medico.nome}} </td>
+              <td class="align-row">{{consulta.dia | date:'dd/LL/Y'}} </td>
+              <td class="align-row">{{consulta.horario}} </td>
+              <td><button class="btn-desmarcar" nbButton ghost status='success'>
+                  <nb-icon icon="close-outline"></nb-icon> Desmarcar
+                </button></td>
             </tr>
           </tbody>
         </table>

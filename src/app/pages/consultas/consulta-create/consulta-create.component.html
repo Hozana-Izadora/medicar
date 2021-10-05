@@ -10,8 +10,8 @@
     </nb-card-header>
       <nb-card-body>
         <nb-select placeholder="Especialidades" fullWidth (selectedChange)="getMedicobyEspecialidade($event)">
-          <nb-option *ngFor="let especialidade of especialidades" [value]="especialidade.value">
-            {{ especialidade.label }}
+          <nb-option *ngFor="let especialidade of especialidades" [value]="especialidade.id">
+            {{ especialidade.nome }}
           </nb-option>
         </nb-select>
         <hr>
@@ -24,13 +24,13 @@
         <nb-select placeholder="Datas" fullWidth (selectedChange)="getHorarioByDatas(idMedico,$event)">
 
           <nb-option *ngFor="let day of datas" [value]="day.value">
-            {{ day.value | date: 'dd/MM/Y'}}
+            {{ day.value | date: 'dd/LL/Y'}}
           </nb-option>
         </nb-select>
         <hr>
         <nb-select placeholder="Horário" fullWidth>
           <nb-option *ngFor="let hora of horario">
-            {{ hora.value }}
+            {{ hora }}
           </nb-option>
         </nb-select>
       </nb-card-body>
@@ -38,10 +38,10 @@
         <div class="row">
 
           <div class="col-md-10">
-            <button nbButton ghost status='success' (click)= "cancelConsulta()">Cancelar</button>
+            <button nbButton ghost status='success' (click)="cancelConsulta()">Cancelar</button>
           </div>
           <div class="col-md-2" >
-            <button nbButton shape="rectangle" status="success">Confirmar</button>
+            <button nbButton shape="rectangle" status="success" >Confirmar</button>
           </div>
 
         </div>

@@ -6,9 +6,11 @@ thead tr{
 .align-row{
     padding: 18px;
 }
-button{
-
+.btn-nova-consulta{
     background-color: #49b4bb!important;
-
     border-radius: 8px!important;
+    border-color: #3e99a0!important;
+}
+.btn-desmarcar{
+    color: #49b4bb!important;
 }

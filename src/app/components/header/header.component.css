@@ -2,3 +2,9 @@
   cursor: pointer;
   color: #49b4bb;
 }
+.left-span{
+  padding-left: 100rem;
+}
+.logoff-span{
+  padding-right: 40px;
+}

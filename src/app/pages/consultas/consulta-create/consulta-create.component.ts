@@ -32,9 +32,8 @@ export class ConsultaCreateComponent implements OnInit {
   ngOnInit(): void {
     this.EspecialidadesService.listEspecialidades().subscribe( (dataEspecialidades: any) => {
         dataEspecialidades.results.forEach((element:any) => {
-        this.especialidades.push({value: element.id, label: element.nome})
-      });
-      // console.log(this.especialidades)      
+        this.especialidades.push(element)
+      });   
     });  
   }
 
@@ -69,7 +68,7 @@ export class ConsultaCreateComponent implements OnInit {
     this.HorarioService.listHorariosByDatas(id,dia).subscribe((resultHorario: any)=>{
       resultHorario.results.forEach((element: any)=>{
         element.horarios.forEach((element2: any) => {
-          this.horario.push({value:element2})
+          this.horario.push(element2)
         });
       });
       console.log(this.horario)

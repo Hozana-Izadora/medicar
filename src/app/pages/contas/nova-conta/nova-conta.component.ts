@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router'
+import { NovaContaService } from 'src/app/services/nova-conta.service';
 
 @Component({
   selector: 'app-nova-conta',
@@ -8,21 +9,30 @@ import {Router} from '@angular/router'
 })
 export class NovaContaComponent implements OnInit {
   showPassword = true;
-  getInputType() {
-    if (this.showPassword) {
-      return 'text';
-    }
-    return 'password';
-  }
+   
+  nome: string = ''
+  email: string = ''
+  senha: string = ''
+  confimSenha: string = '' 
 
-
-
-  toggleShowPassword() {
-    this.showPassword = !this.showPassword;
-  }
-  constructor(private router: Router) { }
+  constructor(
+    private router: Router,
+    private NovaContaService: NovaContaService
+    ) { }
 
   ngOnInit(): void {
+    
+  }
+  novaConta(){
+    this.NovaContaService.newUser(this.nome,this.email, this.senha).subscribe(
+      (result: any)=>{
+        if(result){
+          window.localStorage.setItem('token', result.token);
+          window.localStorage.setItem('user', result.username);
+          this.router.navigate(['/consultas']);
+        }
+      }
+    )
   }
 
   cancel(){
