@@ -13,4 +13,9 @@ export class ConsultasService {
     listConsultas(){
       return this.http.get(this.urlBase)
     }
+
+    delete(idConsulta: number){
+      const parameter = this.urlBase+idConsulta
+      return this.http.delete(parameter)
+    }
 }
