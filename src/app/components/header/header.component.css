@@ -1,10 +1,12 @@
-.link:hover {
+img{
+  width: 200px;
+  margin-top: 5px;
+}
+
+/* .link:hover {
   cursor: pointer;
   color: #49b4bb;
 }
-.left-span{
-  padding-left: 100rem;
-}
 .logoff-span{
   padding-right: 40px;
-}
+} */

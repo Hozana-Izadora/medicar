@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from 'src/app/services/login.service';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-login',
@@ -20,14 +21,24 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-    this.LoginService.getUser(this.email, this.senha).subscribe(
-      (result: any) => {
-        if (result) {
-          window.localStorage.setItem('token', result.token);
-          window.localStorage.setItem('user', result.username);
-          this.router.navigate(['/consultas']);
+    if (this.email || this.senha) {
+      this.LoginService.getUser(this.email, this.senha).subscribe(
+        (result: any) => {
+          if (result) {
+            window.localStorage.setItem('token', result.token);
+            window.localStorage.setItem('user', result.username);
+            this.router.navigate(['/consultas']);
+          }
         }
-      }
-    );
+      );
+    }
+    else{
+      Swal.fire({
+        title: 'Erro',
+        text: 'Preencha todos os campos!',
+        icon: 'error',
+        confirmButtonText: 'ok'
+      })
+    }
   }
 }

@@ -5,7 +5,7 @@ import { HttpClient,HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NbThemeModule, NbLayoutModule, NbCardModule, NbButtonModule, NbIconModule, NbSelectModule, NbInputModule, NbFormFieldModule, NbAutocompleteModule } from '@nebular/theme';
+import { NbThemeModule, NbLayoutModule, NbCardModule, NbButtonModule, NbIconModule, NbSelectModule, NbInputModule, NbFormFieldModule, NbAutocompleteModule, NbToastrModule } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { ConsultasComponent } from './pages/consultas/consultas.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -20,11 +20,11 @@ import { NovaContaComponent } from './pages/contas/nova-conta/nova-conta.compone
 @NgModule({
   declarations: [
     AppComponent,
-    ConsultasComponent,
-    HeaderComponent,
-    ConsultaCreateComponent,
     LoginComponent,
-    NovaContaComponent
+    NovaContaComponent,
+    HeaderComponent,
+    ConsultasComponent,
+    ConsultaCreateComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +43,8 @@ import { NovaContaComponent } from './pages/contas/nova-conta/nova-conta.compone
     FormsModule,
     NbInputModule,
     NbFormFieldModule,
-    NbAutocompleteModule
+    NbAutocompleteModule,
+    NbToastrModule
     
   ],
   providers: [],
