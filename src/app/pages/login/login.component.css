@@ -18,15 +18,16 @@ img {
 .button-margin{
     margin: 50px;;
 }
+.btn-confirm {
+  color: white;
+  background: #49b4bb;
+  border-radius: 8px;
+  width: 200px;
+}
+
 .btn-cancel {
   color: #49b4bb;
   border-radius: 8px;
-  border-color: #dfdada;
+  border-color: #49b4bb;
   width: 200px;
 }
-.btn-confirm {
-    color: white;
-    background: #49b4bb;
-    border-radius: 8px;
-    width: 200px;
-  }

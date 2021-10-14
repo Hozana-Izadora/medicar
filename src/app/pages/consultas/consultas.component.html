@@ -7,7 +7,7 @@
       <nb-card-header>
         <div class="row">
           <div class="col-md-10">
-            <h4>Consulta Clínica</h4> 
+            <h4>Consulta Clínica </h4> 
           </div>
           <div class="col-md-2">
             <button class="btn-nova-consulta" (click)="newConsulta()" nbButton status='success'>
@@ -20,6 +20,7 @@
         <table class="table table-striped">
           <thead>
             <tr class="text-center">
+              <th>#</th>
               <th>ESPECIALIDADE</th>
               <th>PROFISSIONAL</th>
               <th>DATA</th>
@@ -28,7 +29,8 @@
             </tr>
           </thead>
           <tbody> 
-            <tr class="text-center" *ngFor="let consulta of consultas" >
+            <tr class="text-center" *ngFor="let consulta of consultas; let i = index" >
+              <th class="align-row">{{ i + 1 }}</th>
               <td class="align-row">{{consulta.medico.especialidade.nome}}</td>
               <td class="align-row">{{consulta.medico.nome}} </td>
               <td class="align-row">{{consulta.dia | date:'dd/LL/Y'}} </td>

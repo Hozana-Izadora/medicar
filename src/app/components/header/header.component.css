@@ -8,14 +8,13 @@ img{
   
 }
 .header-container{
-  width: 80%;
   display: flex;
 }
 #header-label{
   display: flex;
   position: relative;
-  left: 65rem;
-  top: 17px;
+  left: 85rem;
+  top: 18px;
 }
 
 .link:hover {

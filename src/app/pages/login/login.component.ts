@@ -13,31 +13,33 @@ export class LoginComponent implements OnInit {
 
   email: string = '';
   senha: string = '';
-
+  // user: string = '';
   ngOnInit(): void {}
 
-  novaConta() {
+  newAccount() {
     this.router.navigate(['conta/add']);
   }
 
   login() {
-    if (this.email || this.senha) {
+    if (this.email && this.senha) {
       this.LoginService.getUser(this.email, this.senha).subscribe(
         (result: any) => {
           if (result) {
             window.localStorage.setItem('token', result.token);
-            window.localStorage.setItem('user', result.username);
+            window.localStorage.setItem('user', this.email);
             this.router.navigate(['/consultas']);
           }
         }
       );
+
     }
     else{
       Swal.fire({
         title: 'Erro',
         text: 'Preencha todos os campos!',
         icon: 'error',
-        confirmButtonText: 'ok'
+        confirmButtonColor: "#49b4bb",  
+        confirmButtonText: 'OK'
       })
     }
   }

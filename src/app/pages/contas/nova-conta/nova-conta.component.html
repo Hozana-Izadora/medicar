@@ -12,20 +12,21 @@
                   <div class="col-md-12">
                     <div class="form-floating mb-3">
                         <input type="email" class="form-control input-size" id="usuario" name="usuario"
-                            placeholder="Nome">
+                            placeholder="Nome"  [(ngModel)] = 'nome'>
                         <label for="floatingInput">Nome</label>
                     </div>
                     <div class="form-floating mb-3">
                         <input type="email" class="form-control input-size" id="usuario" name="usuario"
-                            placeholder="name@example.com">
+                            placeholder="name@example.com" [(ngModel)] = 'email'>
                         <label for="floatingInput">Email ou Login</label>
                     </div>
                     <div class="form-floating mb-3">
-                        <input type="password" class="form-control" id="senha" name="senha" placeholder="Senha">
+                        <input type="password" class="form-control" id="senha" name="senha" placeholder="Senha" [(ngModel)] = 'senha'>
                         <label for="floatingPassword">Senha</label>
                     </div>
                     <div class="form-floating">
-                        <input type="password" class="form-control" id="senha" name="senha" placeholder="Confirmar Senha">
+                        <input type="password" class="form-control" id="confirmSenha" name="confirmSenha" placeholder="Confirmar Senha"
+                         [(ngModel)] = 'confirmSenha' (keyup)="cheksPassword()">
                         <label for="floatingPassword">Confirmar Senha</label>
                     </div>
                   </div>
@@ -39,7 +40,7 @@
               <button class="btn btn-cancel" (click)="cancel()">Cancelar</button>
             </div>
             <div class="col-md-6">
-              <button class="btn btn-confirm" (click)="novaConta()">Confirmar</button>
+              <button class="btn btn-confirm" (click)="newAccount()">Confirmar</button>
             </div>
           </div>
         </nb-card-body>

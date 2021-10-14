@@ -47,7 +47,6 @@ export class ConsultaCreateComponent implements OnInit {
       dataMedicos.results.forEach((element:any )=> {
         this.medicos.push({value: element.id, crm:element.crm, label: element.nome})
       });
-      console.log(this.medicos)
     });    
   } 
 
@@ -59,7 +58,6 @@ export class ConsultaCreateComponent implements OnInit {
         
         this.datas.push({value: element.dia})
       });
-      console.log(this.datas,this.idMedico)
     })
   } 
 
@@ -71,7 +69,6 @@ export class ConsultaCreateComponent implements OnInit {
           this.horario.push(element2)
         });
       });
-      console.log(this.horario)
     })
   }
 

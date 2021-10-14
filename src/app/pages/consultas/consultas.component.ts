@@ -15,30 +15,38 @@ export class ConsultasComponent implements OnInit {
     private ConsultasService: ConsultasService
   ) {}
   consultas:any = []
-
+    
   ngOnInit(): void {
-   this.ConsultasService.listConsultas().subscribe((result: any)=>{
+      this.ConsultasService.listConsultas().subscribe((result: any)=>{
      result.results.forEach((element:any)=>{
        this.consultas.push(element)
      })
    })
-  }
+  } 
+
+  //Nova consulta
   newConsulta() {
     this.router.navigate(['consulta/add']);
-  }
+  } 
 
-  deleteConsulta(id:number){
-   
+  //Desmarcar Consulta
+  deleteConsulta(id:number){   
     Swal.fire({
       title: 'Você deseja desmarcar a consulta?',
       showDenyButton: true,
+      confirmButtonColor: "#49b4bb",  
       confirmButtonText: 'Desmarcar',
       denyButtonText: `Cancelar`,
-    }).then(async (result) => {
-      if (result.isConfirmed) {
-        Swal.fire('Desmarcado!', '', 'success')       
-        
-        await window.location.reload();
+    }).then(async (confirm) => {
+      if (confirm.isConfirmed) {
+        Swal.fire({
+          icon: 'success',
+          title: 'Desmarcado!',
+          confirmButtonColor: "#49b4bb", 
+        })           
+        this.ConsultasService.delete(id).subscribe((result)=>{
+          window.location.reload();
+        })
       } 
     })    
   }

@@ -10,7 +10,8 @@ export class NovaContaService {
     private http: HttpClient
   ) { }
 
-    newUser(username: string, email: string, password: any){
+  
+    newUser(username: string, email: string, password: string){
       const body = {username: username, email: email, password: password};
       return this.http.post(this.urlBase,body);
     }
