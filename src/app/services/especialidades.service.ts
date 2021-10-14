@@ -1,15 +1,17 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class EspecialidadesService {
-  urlBase = "https://k6k3qur6vk.api.quickmocker.com/especialidades/"
+  private readonly URLBASE = `${environment.url}especialidades`;
+
 
   constructor(private http: HttpClient) { }
 
     listEspecialidades(){
-      return this.http.get(this.urlBase)
+      return this.http.get(this.URLBASE)
     }
 }

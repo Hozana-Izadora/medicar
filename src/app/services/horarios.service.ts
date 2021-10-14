@@ -1,18 +1,22 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class HorariosService {
+  private readonly URLBASE = `${environment.url}agendas/`;
 
-  urlBase = "https://k6k3qur6vk.api.quickmocker.com/agendas/"
+  constructor(private http: HttpClient) {}
 
-  constructor(private http: HttpClient) { }
+  listHorariosByDatas(idMedico: number, dia: string) {
+    const parameters = new HttpParams()
+      .set('medico', idMedico)
+      .set('data_inicio', dia)
+      .set('data_final', dia);
 
-  listHorariosByDatas(idMedico: number, dia: string){
-    const parameter = `${this.urlBase}?medico=${idMedico}&data_inicio=${dia}&data_final=${dia}`
-    return this.http.get(parameter)
-
+    return this.http.get(this.URLBASE, { params: parameters});
   }
 }
