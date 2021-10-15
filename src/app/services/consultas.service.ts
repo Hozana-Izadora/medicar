@@ -20,4 +20,4 @@ export class ConsultasService {
       const parameter = this.URLBASE+idConsulta
       return this.http.delete(parameter)
     }
-}
+} 

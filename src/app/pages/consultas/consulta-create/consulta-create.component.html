@@ -16,20 +16,20 @@
         </nb-select>
         <hr>
         <nb-select placeholder="Medicos" fullWidth (selectedChange)="getDatasbyMedicos($event)">
-          <nb-option *ngFor="let medico of medicos" [value]="medico.value">
-            {{ medico.label }}
+          <nb-option *ngFor="let medico of medicos" [value]="medico.id">
+            {{ medico.nome }}
           </nb-option>
         </nb-select>
         <hr>
         <nb-select placeholder="Datas" fullWidth (selectedChange)="getHorarioByDatas(idMedico,$event)">
 
-          <nb-option *ngFor="let day of datas" [value]="day.value">
-            {{ day.value | date: 'dd/LL/Y'}}
+          <nb-option *ngFor="let day of datas" [value]="day.dia">
+            {{ day.dia | date: 'dd/LL/Y'}}
           </nb-option>
         </nb-select>
         <hr>
         <nb-select placeholder="Horário" fullWidth>
-          <nb-option *ngFor="let hora of horario">
+          <nb-option *ngFor="let hora of horario" [value]="hora">
             {{ hora }}
           </nb-option>
         </nb-select>
