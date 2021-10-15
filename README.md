@@ -4,7 +4,7 @@ Frontend criado para uma clínica chamada Medicar com o intuito de auxiliar seus
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.5.
 
 ## Clonando Projeto 
-`git clone https://github.com/Hozana-Izadora/desafioMedicar.git`
+`git clone https://github.com/Hozana-Izadora/medicar.git`
 
 ## Instalation
 Run `npm install`
