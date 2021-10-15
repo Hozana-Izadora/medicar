@@ -42,7 +42,7 @@ export class ConsultasComponent implements OnInit {
       if (confirm.isConfirmed) {
         Swal.fire({
           icon: 'success',
-          title: 'Desmarcado!',
+          title: 'Consulta desmarcada!',
           confirmButtonColor: '#49b4bb',
         });
         this.ConsultasService.delete(id).subscribe((result) => {

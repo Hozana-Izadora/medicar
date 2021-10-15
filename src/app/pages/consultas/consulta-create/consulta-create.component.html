@@ -23,13 +23,13 @@
         <hr>
         <nb-select placeholder="Datas" fullWidth (selectedChange)="getHorarioByDatas(idMedico,$event)">
 
-          <nb-option *ngFor="let day of datas" [value]="day.dia">
+          <nb-option *ngFor="let day of datas" [value]="day.id" [(ngModel)] ="idAgenda">
             {{ day.dia | date: 'dd/LL/Y'}}
           </nb-option>
         </nb-select>
         <hr>
         <nb-select placeholder="Horário" fullWidth>
-          <nb-option *ngFor="let hora of horario" [value]="hora">
+          <nb-option *ngFor="let hora of horario" [value]="hora" [(ngModel)] ="horaAgenda">
             {{ hora }}
           </nb-option>
         </nb-select>
@@ -41,7 +41,7 @@
             <button  class="btn btn-cancel" (click)="cancelConsulta()">Cancelar</button>
           </div>
           <div class="col-md-2" >
-            <button  shape="rectangle"  class="btn btn-confirm" >Confirmar</button>
+            <button  shape="rectangle"  class="btn btn-confirm" (click)="confirmConsulta()" >Confirmar</button>
           </div>
 
         </div>
