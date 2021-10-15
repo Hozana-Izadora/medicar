@@ -95,7 +95,6 @@ export class ConsultaCreateComponent implements OnInit {
           title: 'Consulta marcada!',
           confirmButtonColor: '#49b4bb',
         });
-        console.log(dataConsulta)
         this.router.navigate(['consultas']);
       } else {
         Swal.fire({

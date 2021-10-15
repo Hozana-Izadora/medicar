@@ -3,7 +3,7 @@ img{
   margin-top: 5px;
 }
 .header{
-  display: flex;
+  display:flex;
   justify-content: space-between;
   
 }
@@ -12,8 +12,8 @@ img{
 }
 #header-label{
   display: flex;
-  position: relative;
-  left: 85rem;
+  position:relative;
+  left: 1000px;
   top: 18px;
 }
 

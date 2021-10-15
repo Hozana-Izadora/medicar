@@ -1,13 +1,13 @@
 export interface Especialidades {
-  results: Especialidades[];
   id: number;
   nome: string;
+  results: Especialidades[];
 }
 export interface Medicos {
-  results: Medicos[];
   id: number;
   crm: number;
   nome: string;
+  results: Medicos[];
   especialidade: Especialidades[];
 }
 export interface Datas {
