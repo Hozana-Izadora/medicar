@@ -7,6 +7,8 @@ import {
 } from '@angular/common/http';
 import { Observable } from 'rxjs';
 @Injectable()
+
+// Serviço de token do login 
 export class Interceptor implements HttpInterceptor {
   intercept(
     request: HttpRequest<any>,
