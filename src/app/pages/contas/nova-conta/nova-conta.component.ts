@@ -25,7 +25,7 @@ export class NovaContaComponent implements OnInit {
 
   newAccount() {
     //Verifica o preenchimento dos inputs
-    if (this.nome && this.email && this.senha && this.confirmSenha) {
+    if (this.nome && this.email && (this.senha.length < 8) && (this.confirmSenha == this.senha)) {
       //Verifica se senhas são iguais
       if (this.senha == this.confirmSenha) {
         this.NovaContaService.newUser(
